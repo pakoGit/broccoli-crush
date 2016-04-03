@@ -10,6 +10,8 @@ package core {
 		public var sprite:Sprite;
 		
 		public function BroCamera(w:Number, h:Number) {
+			width = w;
+			height = h;
 			sprite = new Sprite;
 			buffer = new BitmapData(w, h, true, bgColor);
 			var bitmap:Bitmap = new Bitmap(buffer);
