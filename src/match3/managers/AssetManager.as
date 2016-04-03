@@ -46,7 +46,7 @@ package match3.managers {
 			loader.addEventListener(IOErrorEvent.IO_ERROR, onDataError);
 			loader.addEventListener(Event.COMPLETE, function(e:Event):void {
 				var xml:XML = new XML(e.target.data);
-				_map[id] = LvlHelper.xmlToArray(xml); //TODO loader
+				_map[id] = {name:xml.level.@name, array:LvlHelper.xmlToArray(xml.level[0])}; //TODO loader
 				if (callback != null) callback(_map[id]);
 			});
 			var req:URLRequest = new URLRequest(path+"?id="+id);
