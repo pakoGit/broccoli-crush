@@ -8,10 +8,13 @@ package core {
 		private var _point:Point;
 		private var _zeroPoint:Point;
 		
+		public var speed:Number;
+		
 		public function BroSprite(x:Number , y:Number, graph:BitmapData) {
 			_zeroPoint = new Point(0, 0);
 			this.x = x;
 			this.y = y;
+			speed = 0.0;
 			_point = new Point(x, y);
 			loadGraph(graph);
 		}
@@ -31,7 +34,7 @@ package core {
 		}
 		
 		public override function draw():void {
-			BroGlobal.camera.buffer.copyPixels(_frame, _frame.rect, _point);
+			BroGlobal.camera.buffer.copyPixels(_frame, _frame.rect, _point, null, null, true);
 		}
 	
 	}
