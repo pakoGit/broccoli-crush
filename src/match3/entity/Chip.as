@@ -8,7 +8,7 @@ package match3.entity {
 		private var _type:int;
 		private var _dest:Point;
 		
-		public function Chip(x:Number, y:Number, type:int) {
+		public function Chip(x:Number = 0, y:Number = 0, type:int = 1) {
 			var bd:BitmapData = AssetManager.get().getData("chip" + type);
 			if(!bd) bd = AssetManager.get().getData("chip1");
 			super(x, y, bd);
@@ -21,7 +21,7 @@ package match3.entity {
 			if (y + speed < _dest.y) {
 				y += speed;
 			}else {
-				y = _dest.y;
+				//y = _dest.y;
 			}
 			super.update();
 		}
@@ -32,5 +32,8 @@ package match3.entity {
 		}
 		
 		public function get type():int { return _type; }
+		public function set type(id:int):void {
+			loadGraph(AssetManager.get().getData("chip" + id));
+		}
 	}
 }

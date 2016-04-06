@@ -23,7 +23,7 @@ package core {
 			_bdata = graph;
 			width = _bdata.width;
 			height = _bdata.height;
-			_frame = new BitmapData(width, height, true);
+			if(!_frame) _frame = new BitmapData(width, height, true);
 		}
 		
 		public override function update():void {
