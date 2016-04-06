@@ -1,4 +1,7 @@
 package match3.util {
+	import core.BroGlobal;
+	import flash.geom.Point;
+	import match3.global.GVar;
 	
 	public class LvlHelper {
 		
@@ -22,6 +25,13 @@ package match3.util {
 			}
 
 			return ret;
+		}
+		
+		private static var pos:Point = new Point;
+		public static function getScreenToLevel(mousePos:Point, offsetX:Number = 0, offsetY:Number = 0):Point {
+			pos.x = int((BroGlobal.mouse.position.x - offsetX) / GVar.TILE_W);
+			pos.y = int((BroGlobal.mouse.position.y - offsetY) / GVar.TILE_H);
+			return pos;
 		}
 	
 	}
