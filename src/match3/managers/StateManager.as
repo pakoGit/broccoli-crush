@@ -1,5 +1,5 @@
 package match3.managers {
-	import match3.level.cell.states.IState;
+	import match3.entity.level.cell.states.IState;
 	
 	public class StateManager {
 		private var _state:IState;

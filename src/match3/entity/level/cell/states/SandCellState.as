@@ -1,8 +1,8 @@
-package match3.level.cell.states {
+package match3.entity.level.cell.states {
 	import core.BroGlobal;
 	import core.BroSprite;
 	import match3.enum.CellNames;
-	import match3.level.cell.Cell;
+	import match3.entity.level.cell.Cell;
 	import match3.managers.AssetManager;
 	
 	public class SandCellState extends NormalCellState {

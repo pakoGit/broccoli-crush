@@ -1,4 +1,4 @@
-package match3.level {
+package match3.entity.level {
 	import core.BroContainer;
 	import core.BroGlobal;
 	import match3.managers.AssetManager;

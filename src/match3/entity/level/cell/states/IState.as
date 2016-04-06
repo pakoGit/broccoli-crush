@@ -1,4 +1,4 @@
-package match3.level.cell.states {
+package match3.entity.level.cell.states {
 	
 public interface IState {
 	function apply():void;

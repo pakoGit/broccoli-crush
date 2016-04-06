@@ -1,11 +1,11 @@
-package match3.level.cell {
+package match3.entity.level.cell {
 	import core.BroContainer;
 	import core.BroSprite;
 	import match3.enum.CellNames;
 	import match3.enum.StateNames;
-	import match3.level.cell.states.IState;
-	import match3.level.cell.states.NormalCellState;
-	import match3.level.cell.states.SandCellState;
+	import match3.entity.level.cell.states.IState;
+	import match3.entity.level.cell.states.NormalCellState;
+	import match3.entity.level.cell.states.SandCellState;
 	import match3.managers.AssetManager;
 	import match3.managers.StateManager;
 	

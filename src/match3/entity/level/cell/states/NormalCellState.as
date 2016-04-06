@@ -1,6 +1,6 @@
-package match3.level.cell.states {
+package match3.entity.level.cell.states {
 	import match3.enum.CellNames;
-	import match3.level.cell.Cell;
+	import match3.entity.level.cell.Cell;
 	
 	public class NormalCellState implements IState {
 		protected var _target:Cell;
